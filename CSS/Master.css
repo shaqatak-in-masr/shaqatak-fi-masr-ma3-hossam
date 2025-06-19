@@ -1,0 +1,616 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+}
+
+:root {
+  --main-color: rgb(47, 40, 40);
+  --bar-color: rgb(47, 40, 40, 50%);
+}
+
+/* Responsive Container */
+
+.container {
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+/* Old phones (very small screen) */
+@media (min-width: 300px) {
+  .container {
+    width: 300px;
+  }
+}
+
+/* Small Phones */
+@media (min-width: 320px) {
+  .container {
+    width: 315px;
+  }
+}
+
+/* Meduim Phones */
+@media (min-width: 375px) {
+  .container {
+    width: 370px;
+  }
+}
+
+/* Large Phones */
+@media (min-width: 425px) {
+  .container {
+    width: 420px;
+  }
+}
+
+/* Small Tablets */
+@media (min-width: 575px) {
+  .container {
+    width: 540px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .container {
+    width: 700px;
+  }
+}
+
+/* Small Laptops */
+@media (min-width: 1024px) {
+  .container {
+    width: 900px;
+  }
+}
+
+/* Large Laptops*/
+@media (min-width: 1440px) {
+  .container {
+    width: 1250px;
+  }
+}
+
+/* 4K Screens */
+@media (min-width: 2000px) {
+  .container {
+    width: 1500px;
+  }
+}
+
+/* End of Responsive Layout */
+
+/* Start of Header */
+
+.header {
+  height: 60px;
+  background-color: var(--main-color);
+  width: 100%;
+  -webkit-position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
+.header .head-bar {
+  height: 60px;
+  position: relative;
+  background-color: var(--main-color);
+  margin-top: 0px;
+
+}
+
+.logo {
+  position: absolute;
+  width: 30px;
+  left: 5px;
+  top: 15px;
+}
+
+.header .head-bar .name {
+  position: absolute;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  left: 40px;
+  top: 24px;
+  color: rgb(225, 239, 251);
+  cursor: default;
+}
+
+
+.header .links-bar {
+  width: 100%;
+  height: 25px;
+  background-color: var(--bar-color);
+}
+
+.header .links-bar .links {
+  display: flex;
+  height: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.header .links-bar .links li {
+  display: inline-block;
+  text-align: center;
+}
+
+.header .links-bar .links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+.header .links-bar .links li a:hover {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  border-bottom: solid black 2px;
+}
+
+/* Landing Division */
+
+.landing {
+  height: calc(100vh - 60px);
+  background-image: url("../images/room.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.intro-text {
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  min-width: 250px;
+  text-align: center;
+  background-color: rgb(47, 40, 40, 50%);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  color: black;
+}
+
+.landing .intro-text h1 {
+  font-size: 25px;
+}
+
+.landing .intro-text p {
+  font-size: 20px;
+}
+
+body {
+  background-color: RGB(219, 209, 199);
+}
+
+
+/* Best division */
+#best {
+  padding-top: 100px;
+}
+
+#best h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 3px 4px 5px black;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.cards-container {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+
+.card {
+  background-color: rgb(156, 156, 156);
+  padding: 10px;
+  border-bottom: solid 3px black;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+
+.card p {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #fff;
+}
+
+.card img {
+     width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background-color: #5b5858;
+      border-radius: 6px;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img:hover {
+  transform: scale(1.5);
+  transition: 0.2s;
+  z-index: 12;
+}
+
+/* ===================< >================== */
+/* About Us Devision */
+
+.about {
+  margin-top: 100px;
+  height: 700px;
+}
+
+#about {
+  height: fit-content;
+  padding-top: 100px;
+}
+
+#about h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 3px 4px 5px black;
+}
+
+.info {
+  height: 100%;
+  width: 100%;
+  background-color: #cfcbcb;
+  box-shadow: 0px 0px 20px 6px #5b5858;
+  padding: 20px;
+  text-align: center;
+}
+
+.info h1 {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+/* ===================< >================== */
+/* About Us Devision */
+
+.contact {
+  margin-top: 100px;
+  height: 700px;
+}
+
+#contact {
+  height: fit-content;
+  background-color: transparent;
+  padding-top: 100px;
+}
+
+#contact h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 3px 4px 5px black;
+}
+
+#contact .info {
+  height: 100%;
+  width: 100%;
+  background-color: #cfcbcb;
+  box-shadow: 0px 0px 20px 6px #5b5858;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.info h1 {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+
+.info img {
+  border-radius: 30%;
+  width: 20px;
+  height: 20px;
+  margin-left: 0px;
+  display: inline-block;
+}
+
+.info a {
+  text-decoration: none;
+  margin-left: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: absolute;
+  text-align: center;
+  color: blue;
+}
+
+.info a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.social-media {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(158, 158, 158);
+  margin-bottom: 2px;
+  padding-left: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.social-media .second-link {
+  margin-left: 160px;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: var(--main-color);
+  color: wheat;
+}
+
+.footer .container {
+  background-color: var(--main-color);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* ========================================================= */
+/* ===================< Page of Products >================== */
+/* ===================< products.html >================== */
+/* ========================================================= */
+.main {
+  min-height: 100vh;
+}
+
+.main h1 {
+  text-align: center;
+  padding-bottom: 25px;
+  padding-top: 50px;
+}
+
+
+
+
+/* ========================================================= */
+/* ====================< View of Product >================== */
+/* ========================================================= */
+
+.view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  height: fit-content;
+  background-color: rgb(228, 216, 204);
+}
+
+
+.view img {
+  background-color: red;
+  width: 35%;
+  height: auto;
+  margin-top: 5vh;
+}
+
+.view img:hover {
+  transform: scale(1.4);
+  z-index: 12;
+  transition: 0.3s;
+}
+
+.view video {
+  height: 70vh;
+  width: 80%;
+  display: block;
+  margin-top: 40px;
+}
+
+.buy-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(47 40 40 / 42%);
+  margin-top: 20px;
+}
+
+.buy-bar h1 {
+  display: inline-block;
+  position: absolute;
+  right: 25px;
+  font-size: 25px;
+}
+
+.buy-bar button {
+  position: absolute;
+  left: 25px;
+  width: 80px;
+  height: 40px;
+  top: 15px;
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+  border: transparent;
+  font-size: 16px;
+  /* box-shadow: 1px 2px 3px black; */
+}
+
+.buy-bar button:hover {
+  animation: switch 0.5s forwards;
+}
+
+@keyframes switch {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: rgb(31, 168, 31);
+    color: white;
+    border: solid 1px transparent;
+  }
+
+}
+
+.description {
+  margin-top: 5px;
+  height: 200px;
+  width: 80%;
+  background-color: rgb(47 40 40 / 42%);
+  text-align: center;
+  padding-top: 20px;
+  font-size: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  line-height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================================= */
+/* Responsive Elements */
+
+/* Device Width :300px to 319px */
+@media (min-width: 300px) and (max-width: 319px) {
+
+  .header,
+  .header .head-bar {
+    height: 40px;
+  }
+
+  .header .container .name {
+    font-size: 11px;
+    left: 30px;
+    top: 15px;
+  }
+
+  .header .container .logo {
+    width: 19px;
+    top: 11px;
+  }
+}
+
+/* Device Width :320px to 375px */
+@media (min-width: 320px) and (max-width: 375px) {
+
+  .header,
+  .header .head-bar {
+    height: 38px;
+  }
+
+  .header .container .name {
+    font-size: 12px;
+    left: 30px;
+    top: 13px;
+  }
+
+  .header .container .logo {
+    width: 20px;
+    top: 9px;
+  }
+}
+
+/* Device Width :376px to 450px */
+@media (min-width: 376px) and (max-width: 450px) {
+
+  .header,
+  .header .head-bar {
+    height: 45px;
+  }
+
+  .header .container .name {
+    font-size: 13px;
+    left: 30px;
+    top: 15px;
+  }
+
+  .header .container .logo {
+    width: 20px;
+    top: 12px;
+  }
+}
+
+/* Responsive Cards */
+ /* للشاشات الكبيرة (أكبر من 1200px) */
+    @media (min-width: 1200px) {
+      .cards-container {
+        grid-template-columns: repeat(4, 1fr); /* 8 كروت في 4 صفوف */
+      }
+    }
+
+    /* للشاشات المتوسطة (من 768px لحد 1199px) */
+    @media (min-width: 768px) and (max-width: 1199px) {
+      .cards-container {
+        grid-template-columns: repeat(3, 1fr); /* 9 كروت في 3 صفوف */
+      }
+    }
+
+    /* للشاشات الصغيرة (أقل من 768px) */
+    @media (max-width: 767px) {
+      .cards-container {
+        grid-template-columns: repeat(3, 1fr); /* 6 كروت في 3 صفوف */
+      }
+    }
+
+    /* لو الشاشة صغيرة جدًا (أقل من 400px): كارتين في كل صف */
+    @media (max-width: 400px) {
+      .cards-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 كروت في الصف */
+      }
+    }  
