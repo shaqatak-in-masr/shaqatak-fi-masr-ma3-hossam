@@ -386,7 +386,7 @@ body {
 /* footer */ 
 .footer {
   width: 100%;
-  background-color: red;
+  background-color: var(--main-color);
   height: 60px;
   display: flex;
   justify-content: center;
